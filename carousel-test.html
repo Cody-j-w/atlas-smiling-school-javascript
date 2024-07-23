@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="font-style.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Coiny&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- custom scripts -->
+</head>
+<body>
+    <section class="popular section d-flex align-items-center">
+        <div class="container">
+          <div id="popular-carousel" class="slick-carousel">
+          
+          </div>
+        </div>
+      </section>
+
+      <!-- test section -->
+      <!-- <div class="card">
+        <img
+          src="images/thumbnail_4.jpg"
+          class="card-img-top"
+          alt="Video thumbnail"
+        />
+        <div class="card-img-overlay text-center">
+          <img
+            src="images/play.png"
+            alt="Play"
+            width="64px"
+            class="align-self-center play-overlay"
+          />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title font-weight-bold">
+            Diagonal Smile
+          </h5>
+          <p class="card-text text-muted">
+            Lorem ipsum dolor sit amet, consect adipiscing elit,
+            sed do eiusmod.
+          </p>
+          <div class="creator d-flex align-items-center">
+            <img
+              src="images/profile_1.jpg"
+              alt="Creator of
+              Video"
+              width="30px"
+              class="rounded-circle"
+            />
+            <h6 class="pl-3 m-0 main-color">Phillip Massey</h6>
+          </div>
+          <div class="info pt-3 d-flex justify-content-between">
+            <div class="rating">
+              <img
+                src="images/star_on.png"
+                alt="star on"
+                width="15px"
+              />
+              <img
+                src="images/star_on.png"
+                alt="star on"
+                width="15px"
+              />
+              <img
+                src="images/star_on.png"
+                alt="star on"
+                width="15px"
+              />
+              <img
+                src="images/star_on.png"
+                alt="star on"
+                width="15px"
+              />
+              <img
+                src="images/star_off.png"
+                alt="star on"
+                width="15px"
+              />
+            </div>
+            <span class="main-color">8 min</span>
+          </div>
+        </div>
+      </div> -->
+
+<script>
+    $(document).ready(() => {
+        $.get("https://smileschool-api.hbtn.info/popular-tutorials")
+        .done((data) => {
+            for (video of data) {
+                console.log(video);
+                // card container
+                const videoCard = $('<div class="card"></div>');
+
+                // thumbnail
+                const cardThumbnail = $(`<img src="${video.thumb_url}" class="card-img-top" alt="${video.title} thumbnail"></img>`);
+                videoCard.append(cardThumbnail);
+
+                // play button overlay
+                const playButtonContainer = $('<div class="card-img-overlay text-center"></div>');
+                const playButton = $('<img src="images/play.png" alt="Play" width="64px" class="align-self-center play-overlay"/>');
+                playButtonContainer.append(playButton);
+                videoCard.append(playButtonContainer);
+
+                // card body
+                const cardBodyContainer = $('<div class="card-body"></div>');
+                const videoTitle = $(`<h5 class="card-title font-weight-bold">${video.title}</h5>`);
+                const videoDescription = $(`<p class="card-text text-muted">${video["sub-title"]}</p>`);
+                cardBodyContainer.append(videoTitle, videoDescription);
+
+                // author information
+                const authorContainer = $('<div class="creator d-flex align-items-center></div>');
+                const authorAvatar = $(`<img src="${video.author_pic_url}" alt="${video.author} avatar" width="30px" class="rounded-circle"/>`);
+                const authorName = $(`<h6 class="pl-3 m-0 main-color">${video.author}</h6>`);
+                authorContainer.append(authorAvatar, authorName);
+                cardBodyContainer.append(authorContainer);
+
+                // video rating information
+                const ratingContainer = $('<div class="info pt-3 d-flex justify-content-between"></div>');
+                const ratingRow = $('<div class="rating"></div>');
+                // rating loop
+                console.log("adding rating");
+                for (i = 1; i <= 5; i++) {
+                    let stars = "";
+                    let starRating = "";
+                    if (video.star >= i) {
+                        stars = "images/star_on.png";
+                        starRating = "star on";
+                    } else {
+                        stars = "images/star_off.png";
+                        starRating = "star off";
+                    }
+                    const starImg = $(`<img src="${stars}" alt="${starRating}" width="15px" class="d-inline-block"/>`);
+                    console.log(starImg);
+                    console.log(`Rating ${i}`);
+                    ratingRow.append(starImg);
+                }
+                const watchTime = $(`<span class="main-color">${video.duration}</span>`);
+                ratingContainer.append(ratingRow, watchTime);
+                cardBodyContainer.append(ratingContainer);
+                videoCard.append(cardBodyContainer);
+                $('#popular-carousel').slick('slickAdd', videoCard);
+
+
+
+
+            }
+        })
+
+        $('.slick-carousel').slick({
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    })
+</script>
+</body>
+</html>
