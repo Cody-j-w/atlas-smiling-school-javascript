@@ -10,68 +10,54 @@ These group of web pages were coded from scratch with the help of the Boostrap F
 
 The designs were planned for Desktop, Tablet, and Mobile.
 
-# Homepage
+### Homepage layout
 
 | **Desktop (Width: 1440 px)**                              | **Tablet (Width: 768 px)**                              | **Mobile (Width: 576 px)**                              |
 | --------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
 | ![Desktop](https://i.ibb.co/pKGgC0J/Homepage-Desktop.png) | ![Tablet](https://i.ibb.co/6XBLwf9/Homepage-Tablet.png) | ![Mobile](https://i.ibb.co/NVBK21F/Homepage-Mobile.png) |
 
-# Pricing
+### Pricing layout
 
 | **Desktop (Width: 1440 px)**                             | **Tablet (Width: 768 px)**                             | **Mobile (Width: 576 px)**                             |
 | -------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 | ![Desktop](https://i.ibb.co/RvSJ2YS/Pricing-Desktop.png) | ![Tablet](https://i.ibb.co/Gkvsf0Y/Pricing-Tablet.png) | ![Mobile](https://i.ibb.co/6RwmYck/Pricing-Mobile.png) |
 
-# Courses
+### Courses layout
 
 | **Desktop (Width: 1440 px)**                             | **Tablet (Width: 768 px)**                             | **Mobile (Width: 576 px)**                             |
 | -------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 | ![Desktop](https://i.ibb.co/y51S3HX/Courses-Desktop.png) | ![Tablet](https://i.ibb.co/28qK1g0/Courses-Tablet.png) | ![Mobile](https://i.ibb.co/f8zNgkx/Courses-Mobile.png) |
 
-# Sections
+## Sections
 
 The Holberton Smiling School web pages were developed by sections using the Bootstrap Front-End framework and CSS styles.
 
-## CSS File
+Functional carousels and search form made using JS with JQuery and Slick libraries.
+
+### CSS File
 
 [Styles](https://github.com/jzamora5/holberton-smiling-school/blob/master/styles.css)
 
-## Homepage
+### script file
 
-[Homepage Header/Hero Section](https://github.com/jzamora5/holberton-smiling-school/blob/master/0-homepage.html)
+[Scripts](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/scripts.js)
 
-[Carousel of quotes](https://github.com/jzamora5/holberton-smiling-school/blob/master/1-homepage.html)
+### Homepage
 
-[Popular Videos](https://github.com/jzamora5/holberton-smiling-school/blob/master/2-homepage.html)
+[Homepage](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/homepage.html)
+[Homepage init script](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/homepage.js)
 
-[Row of smiles](https://github.com/jzamora5/holberton-smiling-school/blob/master/3-homepage.html)
+### Pricing
 
-[Latest Videos](https://github.com/jzamora5/holberton-smiling-school/blob/master/4-homepage.html)
+[Pricing page](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/pricing.html)
+[Pricing init script](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/pricing.js)
 
-[Footer](https://github.com/jzamora5/holberton-smiling-school/blob/master/homepage.html)
+### Courses
 
-## Pricing
+[Courses page](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/courses.html)
+[Courses scripts](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/courses.js)
 
-[Pricing Header](https://github.com/jzamora5/holberton-smiling-school/blob/master/0-pricing.html)
-
-[Prices Grid](https://github.com/jzamora5/holberton-smiling-school/blob/master/1-pricing.html)
-
-[Quotes Section](https://github.com/jzamora5/holberton-smiling-school/blob/master/2-pricing.html)
-
-[FAQ](https://github.com/jzamora5/holberton-smiling-school/blob/master/3-pricing.html)
-
-[Footer](https://github.com/jzamora5/holberton-smiling-school/blob/master/pricing.html)
-
-## Courses
-
-[Courses Header](https://github.com/jzamora5/holberton-smiling-school/blob/master/0-courses.html)
-
-[Search Filters](https://github.com/jzamora5/holberton-smiling-school/blob/master/1-courses.html)
-
-[List of Results](https://github.com/jzamora5/holberton-smiling-school/blob/master/2-courses.html)
-
-[Footer](https://github.com/jzamora5/holberton-smiling-school/blob/master/courses.html)
-
-# Author:
+## Authors
 
 Jhoan Zamora: [jzamora5](https://github.com/jzamora5)
+Cody Walenciak: [Cody-j-w](https://github.com/Cody-j-w)
