@@ -10,6 +10,8 @@ These group of web pages were coded from scratch with the help of the Boostrap F
 
 The designs were planned for Desktop, Tablet, and Mobile.
 
+## Layouts
+
 ### Homepage layout
 
 | **Desktop (Width: 1440 px)**                              | **Tablet (Width: 768 px)**                              | **Mobile (Width: 576 px)**                              |
@@ -45,16 +47,19 @@ Functional carousels and search form made using JS with JQuery and Slick librari
 ### Homepage
 
 [Homepage](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/homepage.html)
+
 [Homepage init script](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/homepage.js)
 
 ### Pricing
 
 [Pricing page](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/pricing.html)
+
 [Pricing init script](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/pricing.js)
 
 ### Courses
 
 [Courses page](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/courses.html)
+
 [Courses scripts](https://github.com/Cody-j-w/atlas-smiling-school-javascript/blob/master/courses.js)
 
 ## Authors
