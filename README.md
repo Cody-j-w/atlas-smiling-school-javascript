@@ -1,4 +1,4 @@
-# Holberton Smiling School (Bootstrap Project)
+# Atlas Smiling School (Bootstrap Project)
 
 [Hosted at https://cody-j-w.github.io/atlas-smiling-school-javascript/homepage.html](https://cody-j-w.github.io/atlas-smiling-school-javascript/homepage.html)
 
